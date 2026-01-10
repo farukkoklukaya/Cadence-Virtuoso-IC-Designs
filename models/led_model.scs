@@ -1,0 +1,2 @@
+simulator lang=spectre
+model MY_GREEN_LED diode is=1e-20 n=2 rs=20
