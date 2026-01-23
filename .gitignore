@@ -1,32 +1,43 @@
-*.bak
+# --- Binary/Lock Files (ALWAYS IGNORE) ---
+*.cdslck
+*.lck
 *.log
 *.log.*
-*.sve
-*.swp
-
-*.cdslck
-*.log
-cdsenv
-cdsinfo.tag
-cdsplotinit
-data.dm
-ihnl.key
-si.env
-spectre.out
-.run.info
 .cadence/
+# This is a local cache file, safe to ignore
+pc.db
 
+# --- Simulation Outputs (ALWAYS IGNORE) ---
+# These folders are massive and contain temporary data
+simulation/
+psf/
 *.raw
-*.history
-*.out
 *.tr*
 *.ac*
 *.noise*
 *.dc*
 *.tran*
 *.measure*
+spectre.out
+ihnl.key
+si.env
 
-constraint
-sev/
-adexl/
-maestro/
+# --- OS/Temp Trash ---
+*.bak
+*.sve
+*.swp
+*~
+Thumbs.db
+
+# ==========================================
+# --- WHAT TO KEEP (DO NOT IGNORE THESE) ---
+# ==========================================
+# Do NOT ignore these:
+# data.dm (Essential metadata)
+# master.tag (Essential for OpenAccess)
+# cdsinfo.tag (Library identity)
+# sch.oa (The actual schematic)
+# layout.oa (The actual layout)
+# maestro/ (Simulation setups)
+# adexl/ (Legacy simulation setups)
+# constraint/ (Design constraints)
